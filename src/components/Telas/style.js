@@ -5,6 +5,9 @@ export default StyleSheet.create({
     tela: {
         flex: 1,
         backgroundColor: cores.background,
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingHorizontal: 32,
+        justifyContent: 'center',
+        paddingBottom: 64,
     }
 })

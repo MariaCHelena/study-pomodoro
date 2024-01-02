@@ -3,9 +3,7 @@ import { cores } from "../../style";
 
 export default StyleSheet.create({
     main: {
-        paddingHorizontal: 32,
-        justifyContent: 'center',
-        paddingBottom: 64,
+        
     },
     welcome: {
         fontWeight: 'bold',
