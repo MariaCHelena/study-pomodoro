@@ -1,6 +1,12 @@
 import React from "react";
 import { Text } from "react-native";
+import style from "./style";
 
-export default function Timer(){
-    return <Text>Timer</Text>
+import Telas from "../../components/Telas";
+
+export default function Home({ navigation }) {
+
+    return <Telas>
+        <Text style={style.texto}>Timer</Text>
+    </Telas>
 }
