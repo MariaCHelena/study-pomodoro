@@ -12,5 +12,5 @@ export const cores = {
     white: "#ECF0F1",
     gray: "#BDC3C7",
     yellow: "#F1C40F",
-    blue: "#2980B9"
+    green: "#006064"
 }
