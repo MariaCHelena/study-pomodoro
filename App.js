@@ -1,10 +1,12 @@
 import React from 'react';
-import { SafeAreaView, StatusBar } from 'react-native';
 
 import Rotas from './src/Rotas';
+import { TimerProvider } from './src/contexts/timerContext';
 
 export default function App() {
   return (
-    <Rotas />
+      <TimerProvider>
+        <Rotas />
+      </TimerProvider>
   );
 }

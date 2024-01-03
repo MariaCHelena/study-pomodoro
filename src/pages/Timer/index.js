@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Pressable, Text, TouchableHighlight, TouchableOpacity, View } from "react-native";
-import * as Animatable from 'react-native-animatable';
+import React, { useContext, useEffect, useState } from "react";
+import { Pressable, Text, TouchableOpacity, View } from "react-native";
 
 import styles from "./style";
 import { cores } from "../../style";
@@ -9,12 +8,18 @@ import Telas from "../../components/Telas";
 import Icon from 'react-native-vector-icons/Feather';
 import TimerCountDownDisplay from "../../components/TimerCountDownDisplay";
 import TimerPauseButton from "../../components/TimerPauseButton";
+import { timerContext } from "../../contexts/timerContext";
 
-const FOCUS_TIME_MINUTES = 25 * 60 * 1000;
-const BREAK_TIME_MINUTES = 5 * 60 * 1000;
-const LONG_BREAK_TIME_MINUTES = 15 * 60 * 1000;
 
-export default function Home({ navigation }) {
+
+
+
+export default function Home() {
+    const { focus, shortBreak, longBreak } = useContext(timerContext)
+    const FOCUS_TIME_MINUTES = focus * 60 * 1000;
+    const BREAK_TIME_MINUTES = shortBreak * 60 * 1000;
+    const LONG_BREAK_TIME_MINUTES = longBreak * 60 * 1000;
+
     const [showClock, setShowClock] = useState(false)
     const [pause, setPause] = useState(false)
     const [timerCount, setTimerCount] = useState(FOCUS_TIME_MINUTES)

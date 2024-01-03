@@ -32,5 +32,15 @@ export default StyleSheet.create({
         color: cores.white,
         fontWeight: "bold",
         fontSize: 24,
+    },
+    textInputView: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between"
+    },
+    labelText: {
+        fontSize: 20,
+        color: cores.white,
+        fontWeight: "bold"
     }
 })
