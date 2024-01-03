@@ -23,7 +23,7 @@ export default function Configurations() {
     <Telas style={style.main}>
       <Header iconColor={temaEscolhido.text}/>
       <View style={style.main}>
-        <Text style={style.title}>Configurations</Text>
+        <Text style={style.title}>Settings</Text>
         <View style={style.container}>
           <Text style={style.titleContainer}>Focus Time</Text>
           <View style={style.textInputView}>
