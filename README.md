@@ -7,7 +7,7 @@
 ## Imagens
 | Tema Claro | Tema escuro | Tela do Timer | Tela de configurações |
 | --- | --- | --- | --- |
-| <img src="./screenshots/light.png" width="150"> | <img src="./screenshots/dark.png" width="150"> | <img src="./screenshots/timer.png" width="150"> | <img src="./screenshots/settings.png" width="300">
+| <img src="./screenshots/light.png" width="150"> | <img src="./screenshots/dark.png" width="150"> | <img src="./screenshots/timer.png" width="150"> | <img src="./screenshots/settings.png" width="150">
 
 ## Informações técnicas
 ### Como rodar a aplicação
