@@ -16,7 +16,7 @@ export const cores = {
 }
 
 export const escuro = {
-    dark: "#34495E",
+    dark: "#212121",
     background: "#2C3E50",
     text: "#ECF0F1",
     white: "#ECF0F1",

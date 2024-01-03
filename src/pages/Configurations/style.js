@@ -3,9 +3,10 @@ import { StyleSheet } from "react-native";
 export const styles = (tema) => {
     return StyleSheet.create({
         main: {
+            alignItems: "center",
             flex: 1,
-            alignItems: "flex-start",
             justifyContent: "flex-start",
+            paddingVertical: 32,
             width: "100%"
         },
         title: {
@@ -13,7 +14,7 @@ export const styles = (tema) => {
             color: tema.text,
             fontWeight: "bold",
             textTransform: "uppercase",
-            marginVertical: 12,
+            marginBottom: 12,
         },
         container: {
             width: "100%",

@@ -15,6 +15,7 @@ export default function styles(pause, tema) {
             height: "20%",
             justifyContent: "center",
             alignItems: "center",
+            textAlign: "center"
         },
         clockArea: {
             flexGrow: 1,
@@ -43,7 +44,8 @@ export default function styles(pause, tema) {
             elevation: 5
         },
         textButton: {
-
+            color: tema.dark,
+            fontWeight: 'bold'
         },
         cancelButton: {
             backgroundColor: tema.green,

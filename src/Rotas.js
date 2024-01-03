@@ -10,7 +10,11 @@ const Stack = createNativeStackNavigator();
 
 export default function Rotas(){
     return <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+            screenOptions={{
+                headerShown: false,
+            }}
+        >
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Timer" component={Timer}/>
             <Stack.Screen name="Configurations" component={Configurations} />

@@ -6,9 +6,9 @@ export default function styles(tema) {
             fontWeight: 'bold',
             fontSize: 30,
             color: tema.yellow,
-            marginTop: 16,
             marginBottom: '10%',
             textAlign: "center",
+            elevation: 4,
         },
         motivation: {
             fontSize: 18,

@@ -5,7 +5,7 @@ import Telas from "../../components/Telas";
 import { styles } from "./style";
 import { timerContext } from "../../contexts/timerContext";
 import { themeContext } from "../../contexts/themeContext";
-
+import Header from "../../components/Header";
 
 export default function Configurations() {
   const { temaAtual, setTemaAtual, temaEscolhido } = useContext(themeContext)
@@ -20,7 +20,8 @@ export default function Configurations() {
   }
 
   return (
-    <Telas>
+    <Telas style={style.main}>
+      <Header iconColor={temaEscolhido.text}/>
       <View style={style.main}>
         <Text style={style.title}>Configurations</Text>
         <View style={style.container}>
@@ -60,7 +61,7 @@ export default function Configurations() {
           </View>
         </View>
         <View style={[style.container, style.themeContainer]}>
-          <Text style={style.titleContainer}>Tema: {temaAtual}</Text>
+          <Text style={style.titleContainer}>Theme: {temaAtual === 'escuro' ? 'dark' : 'light'}</Text>
           <Switch
             value={temaAtual === 'escuro' ? true : false}
             onValueChange={() => temaAtual === 'escuro' ?

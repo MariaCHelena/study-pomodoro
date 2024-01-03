@@ -5,9 +5,9 @@ export default function styled(tema) {
         tela: {
             flex: 1,
             alignItems: 'center',
-            paddingHorizontal: 32,
+            padding: 52,
             justifyContent: 'center',
-            paddingBottom: 64,
+            paddingVertical: 64,
             backgroundColor: tema.background,
         }
     })

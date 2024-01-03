@@ -14,7 +14,7 @@ export default function Home({ navigation }) {
     const {focus} = useContext(timerContext)
 
     return <Telas styles={style.main}>
-        <Text style={style.welcome}>Welcome to Study Pomodoro! {focus}</Text>
+        <Text style={style.welcome}>Welcome to Study Pomodoro!</Text>
         <Text style={style.motivation}>Study consistently to accomplish your goals.</Text>
         <View style={style.buttonsWrapper}>
             <TouchableOpacity

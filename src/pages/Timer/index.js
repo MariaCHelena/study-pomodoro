@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { Pressable, Text, TouchableOpacity, View } from "react-native";
 
 import styles from "./style";
-import { cores } from "../../style";
 
 import Telas from "../../components/Telas";
 import Icon from 'react-native-vector-icons/Feather';
@@ -11,6 +10,7 @@ import TimerPauseButton from "../../components/TimerPauseButton";
 
 import { themeContext } from "../../contexts/themeContext";
 import { timerContext } from "../../contexts/timerContext";
+import Header from "../../components/Header";
 
 export default function Home() {
 
@@ -74,8 +74,9 @@ export default function Home() {
     }, [timerCount])
 
     return <Telas style={style.main}>
+        <Header iconColor={temaEscolhido.text}/>
         <View style={style.header}>
-            <Text style={style.text}>{showClock ? `${timerMode} time!` : "Timer"}</Text>
+            <Text style={style.text}>{showClock ? `${timerMode} time!` : "Press the play button to start the timer"}</Text>
         </View>
         <View style={style.clockArea}>
             {showClock ? <View>
