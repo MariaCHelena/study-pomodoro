@@ -6,10 +6,15 @@ export default function styles(pause, tema) {
             color: tema.text,
             fontSize: 32
         },
+        startScreen: {
+            alignItems: 'center',
+            flex: 1
+        },
         main: {
             alignItems: "center",
             paddingVertical: 32,
-            width: "100%"
+            width: "100%",
+            flex: 1
         },
         header: {
             height: "20%",
@@ -17,6 +22,14 @@ export default function styles(pause, tema) {
             alignItems: "center",
             textAlign: "center"
         },
+        pickerBox: {
+            marginTop: 10,
+            backgroundColor: tema.white,
+        },
+        pickerText: {
+            fontSize: 18,
+            color: tema.dark
+        },    
         clockArea: {
             flexGrow: 1,
             width: 300,
