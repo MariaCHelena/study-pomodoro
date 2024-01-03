@@ -27,11 +27,11 @@ export default function Home({ navigation }) {
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => {
-                    navigation.navigate('Configurations')
+                    navigation.navigate('Settings')
                 }}
                 style={style.buttons}
             >
-                <Text style={style.textButton}>Configurations</Text>
+                <Text style={style.textButton}>Settings</Text>
             </TouchableOpacity>
         </View>
     </Telas>

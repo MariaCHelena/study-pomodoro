@@ -5,9 +5,9 @@
 - Nas configurações do app é possível alterar o tema da aplicação e alterar o tempo padrão de cada um dos modos disponível.
 
 ## Imagens
-| Tema Claro | Tema escuro | Tela do Timer | Tela de configurações |
-| --- | --- | --- | --- |
-| <img src="./screenshots/light.png" width="150"> | <img src="./screenshots/dark.png" width="150"> | <img src="./screenshots/timer.png" width="150"> | <img src="./screenshots/settings.png" width="150">
+| Tema Claro | Tema escuro | Tela do Timer | Tela de Pausa | Tela de configurações |
+| --- | --- | --- | --- | --- |
+| <img src="./screenshots/light.png" width="150"> | <img src="./screenshots/dark.png" width="150"> | <img src="./screenshots/timer.png" width="150"> | <img src="./screenshots/short.png" width="150"> | <img src="./screenshots/settings.png" width="150"> |
 
 ## Informações técnicas
 ### Como rodar a aplicação

@@ -17,7 +17,7 @@ export default function Rotas(){
         >
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Timer" component={Timer}/>
-            <Stack.Screen name="Settins" component={Configurations} />
+            <Stack.Screen name="Settings" component={Configurations} />
         </Stack.Navigator>
     </NavigationContainer>
 }
