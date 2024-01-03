@@ -8,7 +8,7 @@ import { themeContext } from "../../contexts/themeContext";
 import Header from "../../components/Header";
 
 export default function Configurations() {
-  const { temaAtual, setTemaAtual, temaEscolhido } = useContext(themeContext)
+  const { temaAtual, temaEscolhido, saveThemeAsync } = useContext(themeContext)
 
   const style = styles(temaEscolhido)
 
@@ -65,8 +65,8 @@ export default function Configurations() {
           <Switch
             value={temaAtual === 'escuro' ? true : false}
             onValueChange={() => temaAtual === 'escuro' ?
-              setTemaAtual('claro') :
-              setTemaAtual('escuro')
+              saveThemeAsync('claro') :
+              saveThemeAsync('escuro')
             }
           />
         </View>

@@ -24,7 +24,6 @@ export default function styles(tema) {
         buttons: {
             marginTop: 18,
             backgroundColor: tema.green,
-
             width: '100%',
             borderRadius: 50,
             textAlign: 'center',
