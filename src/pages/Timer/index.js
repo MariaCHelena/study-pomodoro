@@ -8,13 +8,14 @@ import Telas from "../../components/Telas";
 import Icon from 'react-native-vector-icons/Feather';
 import TimerCountDownDisplay from "../../components/TimerCountDownDisplay";
 import TimerPauseButton from "../../components/TimerPauseButton";
+
+import { themeContext } from "../../contexts/themeContext";
 import { timerContext } from "../../contexts/timerContext";
 
-
-
-
-
 export default function Home() {
+
+    const { temaEscolhido } = useContext(themeContext)
+
     const { focus, shortBreak, longBreak } = useContext(timerContext)
     const FOCUS_TIME_MINUTES = focus * 60 * 1000;
     const BREAK_TIME_MINUTES = shortBreak * 60 * 1000;
@@ -27,7 +28,7 @@ export default function Home() {
     const [timerMode, setTimerMode] = useState("Focus")
     const [turns, setTurns] = useState(0)
 
-    const style = styles(showClock)
+    const style = styles(showClock, temaEscolhido)
 
     function startTimer() {
         setPause(false)
@@ -81,12 +82,12 @@ export default function Home() {
                 <TimerCountDownDisplay timerDate={timerDate} styles={[style.time, style.timerElement]} />
 
                 <View style={style.buttonsWrapper}>
-                    <TimerPauseButton pause={pause} startTimer={startTimer} stopTimer={stopTimer} styleButElement={style.buttonElement} styleBut={style.button} stylePauseBut={style.pauseButton} />
+                    <TimerPauseButton pause={pause} startTimer={startTimer} stopTimer={stopTimer} styleButElement={style.buttonElement} styleBut={style.button} stylePauseBut={style.pauseButton} styleTextBut={style.textButton}/>
                     <TouchableOpacity
                         onPress={() => cancelTimer()}
                         style={[style.button, style.cancelButton, style.buttonElement]}
                     >
-                        <Text>Cancel Timer</Text>
+                        <Text style={style.textButton}>Cancel Timer</Text>
                     </TouchableOpacity>
                 </View>
             </View> : <Pressable
@@ -96,7 +97,6 @@ export default function Home() {
                     style={style.timerElement}
                     name="play-circle"
                     size={120}
-                    color={cores.white}
                 />
             </Pressable>}
         </View>

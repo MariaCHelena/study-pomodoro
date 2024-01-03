@@ -2,11 +2,15 @@ import React from "react";
 import { TouchableOpacity, Text, View } from "react-native";
 import { useContext } from "react";
 
+import { themeContext } from "../../contexts/themeContext";
+
 import Telas from "../../components/Telas";
-import style from "./style";
+import styles from "./style";
 import { timerContext } from "../../contexts/timerContext";
 
 export default function Home({ navigation }) {
+    const {temaEscolhido } = useContext(themeContext)
+    const style = styles(temaEscolhido)
     const {focus} = useContext(timerContext)
 
     return <Telas styles={style.main}>

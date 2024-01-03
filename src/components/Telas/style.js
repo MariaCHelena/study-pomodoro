@@ -1,13 +1,14 @@
 import { StyleSheet } from "react-native";
-import { cores } from "../../style";
 
-export default StyleSheet.create({
-    tela: {
-        flex: 1,
-        backgroundColor: cores.background,
-        alignItems: 'center',
-        paddingHorizontal: 32,
-        justifyContent: 'center',
-        paddingBottom: 64,
-    }
-})
+export default function styled(tema) {
+    return StyleSheet.create({
+        tela: {
+            flex: 1,
+            alignItems: 'center',
+            paddingHorizontal: 32,
+            justifyContent: 'center',
+            paddingBottom: 64,
+            backgroundColor: tema.background,
+        }
+    })
+}

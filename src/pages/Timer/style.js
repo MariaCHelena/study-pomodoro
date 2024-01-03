@@ -1,10 +1,9 @@
 import { StyleSheet } from "react-native";
-import { cores } from "../../style";
 
-export default function styles(pause) {
+export default function styles(pause, tema) {
     return StyleSheet.create({
         text: {
-            color: cores.white,
+            color: tema.text,
             fontSize: 32
         },
         main: {
@@ -24,25 +23,30 @@ export default function styles(pause) {
         },
         timerElement: {
             marginTop: 120,
-            alignItems: "center"
+            alignItems: "center",
+            color: tema.text
         },
         time: {
-            color: cores.white,
+            color: tema.text,
             fontSize: 86,
             alignItems: "center",
             textAlign: 'center'
         },
         button: {
-            color: cores.white,
+            color: tema.text,
             padding: 18,
-            backgroundColor: cores.yellow,
+            backgroundColor: tema.yellow,
             textAlign: "center",
             alignItems: "center",
             borderRadius: 30,
-            color: cores.white,
+            color: tema.text,
+            elevation: 5
+        },
+        textButton: {
+
         },
         cancelButton: {
-            backgroundColor: cores.green,
+            backgroundColor: tema.green,
         },
         pauseButton:{
             width: (pause ? "100%" : "45%")

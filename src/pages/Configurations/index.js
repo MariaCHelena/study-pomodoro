@@ -1,15 +1,20 @@
 import React, { useContext } from "react";
-import { Text, View, TextInput } from "react-native";
+import { Text, View, TextInput, Switch } from "react-native";
 
 import Telas from "../../components/Telas";
-import style from "./style";
+import { styles } from "./style";
 import { timerContext } from "../../contexts/timerContext";
+import { themeContext } from "../../contexts/themeContext";
+
 
 export default function Configurations() {
+  const { temaAtual, setTemaAtual, temaEscolhido } = useContext(themeContext)
 
-  const {focus, setFocus, shortBreak, setShortBreak, longBreak, setLongBreak} = useContext(timerContext)
+  const style = styles(temaEscolhido)
 
-  function displayValue(value, action){
+  const { focus, setFocus, shortBreak, setShortBreak, longBreak, setLongBreak } = useContext(timerContext)
+
+  function displayValue(value, action) {
     action(value)
     return String(value)
   }
@@ -53,6 +58,16 @@ export default function Configurations() {
             />
             <Text style={style.labelText}>min</Text>
           </View>
+        </View>
+        <View style={[style.container, style.themeContainer]}>
+          <Text style={style.titleContainer}>Tema: {temaAtual}</Text>
+          <Switch
+            value={temaAtual === 'escuro' ? true : false}
+            onValueChange={() => temaAtual === 'escuro' ?
+              setTemaAtual('claro') :
+              setTemaAtual('escuro')
+            }
+          />
         </View>
       </View>
     </Telas>

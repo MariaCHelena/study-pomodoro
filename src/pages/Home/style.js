@@ -1,43 +1,41 @@
 import { StyleSheet } from "react-native";
-import { cores } from "../../style";
 
-export default StyleSheet.create({
-    main: {
-        
-    },
-    welcome: {
-        fontWeight: 'bold',
-        fontSize: 30,
-        color: cores.yellow,
-        marginTop: 16,
-        marginBottom: '10%',
-        textAlign: "center",
-    },
-    motivation: {
-        fontSize: 18,
-        color: cores.white,
-        marginBottom: "10%",
-        textAlign: "center"
-    },
-    buttonsWrapper: {
-        width: "80%",
-        marginHorizontal: 'auto',
-        alignItems: 'center'
-    },
-    buttons: {
-        marginTop: 18,
-        backgroundColor: cores.green,
+export default function styles(tema) {
+    return StyleSheet.create({
+        welcome: {
+            fontWeight: 'bold',
+            fontSize: 30,
+            color: tema.yellow,
+            marginTop: 16,
+            marginBottom: '10%',
+            textAlign: "center",
+        },
+        motivation: {
+            fontSize: 18,
+            color: tema.text,
+            marginBottom: "10%",
+            textAlign: "center"
+        },
+        buttonsWrapper: {
+            width: "80%",
+            marginHorizontal: 'auto',
+            alignItems: 'center'
+        },
+        buttons: {
+            marginTop: 18,
+            backgroundColor: tema.green,
 
-        width: '100%',
-        borderRadius: 50,
-        textAlign: 'center',
-        alignItems: 'center',
-        paddingVertical: 18,
-        elevation: 5
-    },
-    textButton: {
-        color: cores.white,
-        fontWeight: "bold",
-        fontSize: 16,
-    }
-})
+            width: '100%',
+            borderRadius: 50,
+            textAlign: 'center',
+            alignItems: 'center',
+            paddingVertical: 18,
+            elevation: 5
+        },
+        textButton: {
+            color: tema.text,
+            fontWeight: "bold",
+            fontSize: 16,
+        }
+    })
+}
